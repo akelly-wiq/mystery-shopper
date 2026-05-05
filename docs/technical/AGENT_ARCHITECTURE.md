@@ -1,8 +1,7 @@
 # Mystery Shopping Agent Architecture - REVISED Design
 
-**Updated:** May 5, 2026 (Post-Catchup)  
-**Status:** Current Architecture  
-**Previous Version:** AGENT_ARCHITECTURE_DESIGN.md
+**Created:** May 5, 2026  
+**Status:** Current Architecture
 
 ---
 
@@ -515,8 +514,6 @@ def run_mystery_shop(mission, persona, date_run):
 
 ## Key Architecture Benefits
 
-### Why This Design Works
-
 | Feature | Benefit |
 |---------|---------|
 | **Per-Vendor Agents** | Clean separation, parallel processing possible |
@@ -524,16 +521,6 @@ def run_mystery_shop(mission, persona, date_run):
 | **Ingredient-Level Evaluation** | Rich justification for every decision |
 | **Persona Prompt Injection** | Consistent decision-making aligned with CREST segments |
 | **Rich BigQuery Output** | Complete traceability and analysis capability |
-
-### Comparison to Previous Design
-
-| Aspect | Previous Design | Current Design |
-|--------|----------------|----------------|
-| **Agent Scope** | Per-ingredient voting | Per-vendor, all ingredients |
-| **Evaluation** | Basket-level only | Per-ingredient justification |
-| **Product Context** | RAG top-15 candidates | Full vendor catalog |
-| **Output Granularity** | Basket summaries | Ingredient-level detail |
-| **Traceability** | Moderate | **High** - full justifications |
 
 ---
 
@@ -577,5 +564,4 @@ gantt
 ---
 
 **Last Updated:** May 5, 2026 (Post-Catchup)  
-**Status:** Current Recommended Architecture  
-**Supersedes:** AGENT_ARCHITECTURE_DESIGN.md (sequential basket-level approach)
+**Status:** Current Architecture
