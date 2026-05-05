@@ -10,6 +10,17 @@
 
 ---
 
+## Decision Priority (STRICT ORDER)
+
+1. **Price** (cheapest option, own brand)
+2. **Need vs want** (essential items only)
+3. **Simplicity** (familiar, basic products)
+4. **Everything else is irrelevant** (no health claims, no premium, no brand)
+
+👉 Price is the ONLY real factor. If it's not essential, skip it.
+
+---
+
 ## Decision Framework
 
 1. Always check cheapest/own brand first
@@ -19,6 +30,16 @@
 5. Keep choices simple and familiar
 6. Brand doesn't matter - price does
 7. Skip non-essentials entirely
+
+---
+
+## Tie-Breaker Rules
+
+When two options are close:
+- **If similar price** → choose own brand/homebrand
+- **If own brand on yellow ticket** → definitely choose own brand
+- **If both same price** → choose smallest pack (don't over-buy)
+- **If unsure** → choose the absolute cheapest option
 
 ---
 

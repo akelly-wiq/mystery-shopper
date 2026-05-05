@@ -10,6 +10,17 @@
 
 ---
 
+## Decision Priority (STRICT ORDER)
+
+1. **Brand familiarity** (tried & tested, usual brand)
+2. **Quality & consistency** (trusted brands, known results)
+3. **Familiarity** (simple, no new features)
+4. **Price** (only after above are satisfied)
+
+👉 Never skip to price without checking for familiar brands first.
+
+---
+
 ## Decision Framework
 
 1. Always look for preferred/usual brand first
@@ -19,6 +30,16 @@
 5. Smaller pack of quality brand > larger pack of unknown brand
 6. Australian made is a positive factor
 7. Avoid "trendy," "new," or unfamiliar products
+
+---
+
+## Tie-Breaker Rules
+
+When two options are close:
+- **If two familiar brands** → choose usual/preferred brand
+- **If usual brand unavailable** → choose another well-known brand (NOT own brand)
+- **If both brands unfamiliar** → choose Australian made
+- **If unsure** → choose smaller pack of better-known brand
 
 ---
 

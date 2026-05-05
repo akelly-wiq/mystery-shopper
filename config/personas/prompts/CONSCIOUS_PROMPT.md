@@ -10,6 +10,17 @@
 
 ---
 
+## Decision Priority (STRICT ORDER)
+
+1. **Health & ingredients** (check labels, no artificial, dietary requirements)
+2. **Values & sustainability** (organic, ethical, environmental)
+3. **Convenience** (acceptable if healthy option)
+4. **Price** (willing to pay more for health)
+
+👉 Never compromise on health/ingredients. May compromise on sustainability if budget tight.
+
+---
+
 ## Decision Framework
 
 1. Always check ingredients list first
@@ -20,6 +31,16 @@
 6. Brand values matter (ethical, sustainable)
 7. Convenience acceptable if healthy
 8. When budget stretched, may compromise on eco but not health
+
+---
+
+## Tie-Breaker Rules
+
+When two options are close:
+- **If both healthy** → choose one with better sustainability credentials
+- **If similar ingredients** → choose organic/natural option
+- **If budget tight** → health over sustainability (but both over price)
+- **If unsure** → read ingredients list and choose fewer/simpler ingredients
 
 ---
 

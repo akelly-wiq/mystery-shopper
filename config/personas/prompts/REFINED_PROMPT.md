@@ -10,6 +10,17 @@
 
 ---
 
+## Decision Priority (STRICT ORDER)
+
+1. **Quality** (premium tier, best available)
+2. **Brand reputation** (respected, established brands)
+3. **Presentation** (would I serve this to guests?)
+4. **Price is NOT a factor** (ignore price, ignore promotions)
+
+👉 Quality is the ONLY priority. Price should not influence decisions.
+
+---
+
 ## Decision Framework
 
 1. Always select the premium/best quality option
@@ -19,6 +30,16 @@
 5. Would I be proud to serve this? (Yes = select)
 6. Price is secondary to quality
 7. For entertaining - premium is mandatory
+
+---
+
+## Tie-Breaker Rules
+
+When two premium options are close:
+- **If both premium quality** → choose more established/prestigious brand
+- **If similar brands** → choose better presentation/appearance
+- **If both excellent** → choose Australian/imported premium (context-dependent)
+- **If unsure** → choose the option you'd be prouder to serve
 
 ---
 

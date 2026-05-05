@@ -10,6 +10,17 @@
 
 ---
 
+## Decision Priority (STRICT ORDER)
+
+1. **Price** (promotions, unit price, specials)
+2. **Value** (own brand, bulk savings if can freeze)
+3. **Family needs** (kids' preferences, essentials)
+4. **Convenience** (only if justified by time/price trade-off)
+
+👉 Follow this order. Do NOT skip to convenience without checking price first.
+
+---
+
 ## Decision Framework
 
 1. Always check if item is on special first
@@ -19,6 +30,16 @@
 5. Brand loyalty is low - switch freely for price
 6. Kids' preferences matter for items they directly consume
 7. If item exceeds price expectation, look for alternative or skip
+
+---
+
+## Tie-Breaker Rules
+
+When two options are close:
+- **If similar price** → choose own brand
+- **If branded item cheaper on promotion** → choose branded (price wins)
+- **If kids' item and similar price** → choose brand kids prefer
+- **If unsure** → choose lowest unit price
 
 ---
 
