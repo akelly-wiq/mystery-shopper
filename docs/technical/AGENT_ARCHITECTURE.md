@@ -213,19 +213,19 @@ graph TD
     subgraph BigQueryTable["shop_results_detailed Table"]
         direction TB
         
-        Meta[METADATA FIELDS<br/>- run_id<br/>- date_run<br/>- week_label<br/>- execution_timestamp]
+        Meta["METADATA FIELDS<br/>- run_id<br/>- date_run<br/>- week_label<br/>- execution_timestamp"]
         
-        Mission[MISSION FIELDS<br/>- mission_id<br/>- mission_name<br/>- mission_description<br/>- persona (CREST)<br/>- persona_description]
+        Mission["MISSION FIELDS<br/>- mission_id<br/>- mission_name<br/>- mission_description<br/>- persona_crest<br/>- persona_description"]
         
-        Vendor[VENDOR FIELDS<br/>- vendor<br/>- vendor_location<br/>- vendor_category]
+        Vendor["VENDOR FIELDS<br/>- vendor<br/>- vendor_location<br/>- vendor_category"]
         
-        Ingredient[INGREDIENT FIELDS<br/>- ingredient_order<br/>- ingredient_description<br/>- ingredient_quantity<br/>- ingredient_category]
+        Ingredient["INGREDIENT FIELDS<br/>- ingredient_order<br/>- ingredient_description<br/>- ingredient_quantity<br/>- ingredient_category"]
         
-        Product[PRODUCT FIELDS<br/>- product_id<br/>- product_name<br/>- brand<br/>- pack_size<br/>- pack_size_normalized<br/>- price<br/>- unit_price<br/>- promotion_type<br/>- promotion_description<br/>- product_url]
+        Product["PRODUCT FIELDS<br/>- product_id<br/>- product_name<br/>- brand<br/>- pack_size<br/>- pack_size_normalized<br/>- price<br/>- unit_price<br/>- promotion_type<br/>- promotion_description<br/>- product_url"]
         
-        Decision[DECISION FIELDS<br/>- justification (LLM reasoning)<br/>- confidence_score<br/>- alternative_product_id<br/>- selection_timestamp]
+        Decision["DECISION FIELDS<br/>- justification_text<br/>- confidence_score<br/>- alternative_product_id<br/>- selection_timestamp"]
         
-        Quality[QUALITY FIELDS<br/>- organic_flag<br/>- free_range_flag<br/>- australian_made_flag<br/>- own_brand_flag<br/>- status (found/not_found)]
+        Quality["QUALITY FIELDS<br/>- organic_flag<br/>- free_range_flag<br/>- australian_made_flag<br/>- own_brand_flag<br/>- status_found"]
     end
     
     style Meta fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
