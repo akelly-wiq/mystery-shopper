@@ -1,0 +1,57 @@
+Apr 30, 2026
+Mystery shop touch base
+Invited Alexa Kelly Daria Volkova
+Attachments Mystery shop touch base
+Meeting records Transcript 
+
+
+Summary
+Project planning refinements and data preparation status updates regarding semantic search and innovation day challenges.
+
+Project Resource Planning
+Resources were reallocated to ensure timely project delivery. Plans were adjusted to focus front end and back end efforts.
+
+Data and Search Analysis
+Datasets were cleaned and semantic search was validated as effective. Hybrid search was adopted over complex alternatives.
+
+Innovation Day Issues
+Technical permission errors disrupted agent testing. Backup solutions were established to maintain progress.
+
+
+Next steps
+[Alexa Kelly] Setup Update: Prepare project update tonight.
+[Daria Volkova] Focus Backend: Focus specifically on back end development for the Mystery Shopper project.
+[Matt] Assist Frontend: Help with front end development for the Mystery Shopper project.
+[Daria Volkova] Analyze Descriptions: Run analysis for all use cases; check how many product descriptions are missing.
+[Daria Volkova] Check Attributes: Check all products tied to current use cases; confirm attribute completeness for Woolworths products.
+
+
+Details
+Mystery Shopper Project Plan and Resources: Alexa Kelly proposed adjusting the plan for the Mystery Shopper project, suggesting Daria Volkova focus solely on the back end, while they or Matt provide assistance with the front end to ensure timely delivery. This reassessment was prompted by Ben suggesting the project would be ready in a few weeks or sooner, necessitating planning ahead to ensure delivery. Alexa Kelly indicated that they could jump in or secure extra resources if needed to relieve pressure and keep the project on schedule (00:01:14).
+Data Preparation and Cleanliness: Daria Volkova reported that they are ready with all data, including creating a model to retrieve data from Wvers, and adjusting the ALI and Cole’s datasets to be clean and accurate. They also validated that data, at least for Coles and Aldi, appeared to be fully picked up, noting that price per unit for some Aldi products was calculated manually because the data was not available in BigQuery. Daria Volkova mentioned that product data uses mixed units (grams and kilograms), but they anticipate the language model (LLM) can address this or they can adjust the format later if needed (00:01:14).
+Semantic Search Investigation: Daria Volkova investigated using semantic search for Coles and Aldi data and agreed with the assessment that using vert.xi search would be "overkill" due to the relatively small datasets (20,000 entries for Coles and 2K for Aldi). They explored a library for semantic search, created embeddings and indexes by embedding only the product names, and found the results "pretty good" using a pre-trained model with 348 dimensions (00:02:44). Daria Volkova noted that the Google Gemini embedding model with 3,000 dimensions performed worse for this use case (00:04:13).
+Product Description Status and Hybrid Search: Daria Volkova confirmed they could run an analysis to determine how many product descriptions are missing across all eight use cases, suggesting they will check the top three search results for each product to gauge the description coverage (00:04:13). They also reported finding a table related to the Walworths data, but still need to verify if all product attributes are covered for the current use cases (00:05:36). Daria Volkova demonstrated the promising results of the semantic search for both Aldi and Coles products, and affirmed they were using a hybrid search combining keywords and semantics (00:06:51).
+Data Pipeline and Weekly Updates: Daria Volkova is currently using a manual process for loading data and noted that a data pipeline can be built at a later stage. They committed to running an analysis on missing product descriptions and providing an update to Alexa Kelly. The discussion closed with a review of upcoming tasks for the next week, including setting up ADK, building persona-based agent templates, and implementing an agent voting mechanism, with Daria Volkova confirming they are only investigating semantic search vector embedding this week (00:10:00).
+Innovation Day Status: In response to a question about tracking for Innovation Day, Daria Volkova explained they created a simple agent and asked someone to run it, but this individual is encountering model permission errors. Daria Volkova also created their own vert.xi search and a simple agent as a backup in case the primary effort fails, requiring participants only to write a prompt. Alexa Kelly suggested waiting for the following day to conclude and acknowledged that others were also experiencing issues (00:11:33).
+
+
+
+
+
+
+april 29th 
+some coles products don’t have description 50% 
+
+* Price Calculation Logic: They agreed that the price per unit should be based on the realistic sale price (promo price) rather than the standard average price. Daria Volkova will validate the logic for the Coles table to ensure the average promo price is prioritized.1
+* Coles Data Issues: The Coles product details table is missing descriptions for approximately half of its products, which is a significant problem for building attributes. The table currently includes Australian details, allergen information, volume, average price, and average promo price.
+* LLM Fallback Plan: To address the missing descriptions and attributes, they decided to implement a fallback logic using an LLM (Large Language Model) to discern options based on available data, and they will ensure stakeholders are transparently informed of this method.
+* Aldi Data Status: The Aldi data is more complete, with only three to five products missing a description. An LLM was successfully used to extract details like country of origin and allergen information from the Aldi product descriptions.
+* Woolworths Data Discrepancies:
+    * Stock Discrepancy: Alexa Kelly advised ignoring discrepancies where the Vertex AI search shows a product in stock but the website shows it out of stock, as stock is not part of the project scope unless the product has been discontinued.
+    * Missing Attributes: Attributes like country of origin and allergen information are missing or null in the BigQuery tables, despite being available on the website. They checked several internal tables without finding the required data.
+* Project Scope and Testing: They reaffirmed the goal to deliver all eight use cases to avoid extending the project. Alexa instructed Daria to test the BigQuery data by picking one product (like spaghetti Bolognese) and checking the percentage of its ingredients that have a description, with a goal of achieving a 90% completion rate.
+* Next Steps and Investigation:
+    * Daria will proceed with building the Woolworths model (Vertex AI Search to BigQuery).
+    * Daria will also contact the person who provided the data tables to determine why product information that exists on the website is not present in the BigQuery tables.
+    * They agreed to use Woolworths attributes for a product sold at Coles if it is the exact same item and the Coles attribute data is null.
+

@@ -1,0 +1,36 @@
+Apr 22, 2026
+Mystery shopper scope and schedual
+Invited Alexa Kelly Daria Volkova
+Attachments Mystery shopper scope and schedual
+Meeting records Transcript 
+
+
+Summary
+Basket description solution selection centered on an enriched RAG system for ingredient-level processing and competitor data validation.
+
+Review Basket Description Solutions
+The team reviewed 3 solutions for basket description generation, prioritizing a Retrieval-Augmented Generation (RAG) system using 3 independent agents to select products based on the highest vote count. Solution 2 utilizes an LLM judge to validate basket-level attributes like coverage, balance, and total price against the Woolworths API for accuracy.
+
+Enrich Competitor Data Attributes
+A key issue was the lack of rich metadata in competitor BigQuery tables needed for persona-based recommendations (e.g., organic, free range). The team decided to proceed with Solution 2 but mandated data enrichment, requiring the creation of internal heuristic mappings for home brands and trusted brands for LLM differentiation.
+
+Finalize Solution Architecture
+The meeting concluded with the decision to move forward with the enriched Solution 2, confirming the design architecture involving a RAG component for data retrieval and ADK agents for product selection based on persona-specific prompts. The system requires an agent per ingredient, treating each product selection independently, resulting in 15 total runs for a 5-ingredient basket.
+
+
+Next steps
+[Daria Volkova] Message Contact: Message contact regarding product description availability; investigate options for obtaining this metadata.
+[Daria Volkova] Check Search: Investigate existing Vertex AI search functionality returns; determine if necessary product metadata is available.
+[Alexa Kelly] Prepare Presentation: Create a presentation pack for Owen detailing the high level plan; include a realistic 4-week timeline for review on Friday.
+[Alexa Kelly] Share Link: Send Daria the Data Maven link resource; provide context on effective usage for finding BigQuery table data.
+
+
+Details
+Proposed Solutions for Basket Descriptions: Daria Volkova presented three potential solutions for generating basket descriptions, starting with a basic method involving a single prompt with a basket description, which was noted to have issues with invalid links and unreliable SKU product numbers. The second solution, which became the primary focus, involves using a Retrieval-Augmented Generation (RAG) system to gather product data from competitor tables and Woolworths, including price, specials status, price per unit, and nutritional information. This approach proposes using three different agents to ensure consistency in product selection and finding the product with the highest number of votes (highest vote count) among the agents (00:00:00).
+Detailed Plan for Second Solution Implementation: The second solution involves running separate agents for each ingredient, rather than passing a list of entire products. This process uses an LLM as a "judge" for the basket level, checking coverage, balance, and total price, and validating the final price using the Woolworths API (00:01:29). If prices are inconsistent, the agent would be called again, and the results would be stored in BigQuery for final analysis (00:02:38).
+Competitor Data Validation and Scraping Concerns: A key issue raised was the validation of competitor pricing, which Daria Volkova assumed to have 99% accuracy based on external information. Alexa Kelly inquired about product coverage, and Daria Volkova recalled that the external provider had roughly 20,000 products for Aldi per suburb/state, with similar or greater coverage expected for Coles (00:02:38). The third approach discussed involved web scraping for Coles and Aldi, which Daria Volkova had explored using the `crawl for AI` library, but this method is unreliable and blocked for the Woolworths website, leading them to prefer the RAG solution (00:04:07).
+Data Enrichment for Competitors and LLM Logic: The team acknowledged that the competitor BigQuery tables (Coles and Aldi) lack the rich description and metadata needed for persona-based recommendations, such as information on "organic," "free range," or "RSPCA approved" status (00:09:32). Therefore, they decided to proceed with Solution 2 but incorporate data enrichment, specifically to capture product descriptions and other essential attributes (00:10:45). For the LLM to effectively differentiate products for various customer segments (e.g., "saver" vs. "conscious"), they agreed to create their own heuristic mappings, such as defining "home brands" and "trusted brands" for each supermarket, as the required descriptive data is not currently available in the competitor tables (00:13:21) (00:20:46).
+Decision to Go with Enriched Solution Two: They decided to move forward with Solution 2 (the middle option) but with significant data enrichment, which would involve creating custom mappings and attempting to acquire product description data (00:26:59). Daria Volkova was tasked with messaging the external data provider to inquire about the possibility of adding product descriptions to the existing data tables (00:28:39). They confirmed the design architecture, which involves having an agent per ingredient for recipes, treating each product selection independently, and running the process multiple times (e.g., five ingredients multiplied by three agents equals 15 runs) (00:30:05).
+System Design and Component Breakdown: The technical design for the preferred solution was discussed, conceptualizing it as two main components: Component 1, the RAG system, which retrieves all relevant product data and metadata from BigQuery tables based on the ingredient (00:33:52). Component 2 would be the set of ADK agents (one for each persona/segment) that takes the list of products from Component 1, along with a persona-specific prompt, to decide on the best product (00:36:17) (00:39:30). The final output of the system is intended to be a user-friendly front-end interface, potentially with columns listing the basket, price, ingredients, justification, and rankings for Coles, Woolworths, and Aldi (00:40:44).
+Data Acquisition and Attribute Identification Tasks: The immediate next step for Daria Volkova is to pinpoint the exact data required, focusing on whether critical attributes like promotion type, Australian-made flags, and pack size are available in BigQuery tables (00:46:00). They will need to investigate the existing Woolworths Vertex AI search to see if it contains the necessary metadata, otherwise, they will need to construct their own RAG system (00:44:48). Alexa Kelly shared a link to a Data Maven tool to help Daria Volkova hunt down the necessary BigQuery data, which is crucial for achieving the required granularity and accuracy for the LLM decision-making (00:49:28) (00:51:40).
+Timeline and Final Review Preparation: The team plans to create a four-week plan for Ben, focusing the first week on identifying and unlocking the necessary BigQuery data and determining how to acquire the product descriptions (00:43:13) (00:46:00). Alexa Kelly will prepare a high-level plan presentation for Owen, which they will review together before presenting to Owen on Friday for approval (00:51:40).

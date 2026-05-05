@@ -1,0 +1,35 @@
+Competitor Retails Table with prices 
+Invited Alexa Kelly Daria Volkova Mithun Bindiganavile Karthik Chandrasekar Alexander Simmonds Vinit Jiwtani Shashank Sengar Alec Noble
+Attachments Competitor Retails Table with prices 
+Meeting records Transcript 
+
+
+Summary
+Cross-functional teams aligned on mystery shopper data requirements and finalized a customized pricing data repository approach.
+
+Mystery Shopper Data Requirements
+Participants defined project objectives for tracking competitor basket costs. Discussions highlighted inaccuracies in current web scraping methods regarding store locations and product completion.
+
+Competitor Data Collection Process
+Methods for gathering pricing data across major retailers were reviewed. Accuracy remains high for in-store collections despite gaps in online product flags and delayed price updates.
+
+Customized Data View Decision
+Teams decided to create a separate, customized table view to streamline access. This simplifies filtering for specific product columns and ensures cleaner data availability.
+
+
+Next steps
+[Alexa Kelly] Provide Sponsor Name: Identify and provide the last name for the project sponsor Basil.
+[Alexa Kelly] Scope Data Timing: Coordinate with a Business Analyst to scope out stakeholder requirements regarding data freshness (real time versus previous week data).
+[Daria Volkova, Alexa Kelly] Define Data Format: Email the group specifying required columns and the exact format for the bespoke data set (Woolworths product matched to the most recent competitor price).
+[Karthik Chandrasekar, Mithun Bindiganavile, Alexander Simmonds] Create Custom View: Create and deliver the requested custom view data set, ensuring column descriptions are attached; use the provided format specifications.
+
+
+Details
+Introductions and Team Roles: The meeting began with introductions of the participants: Daria Volkova and Alexa Kelly are data scientists from Wick, with Daria working on a GenAI solution and Alexa as a senior manager servicing the customer hub and customer insight (00:00:59). Mithun Bindiganavile is from the PCB team, handling competitor data for price dashboard reporting. Alexander Simmonds looks after customer insights and promotional analytics in PCB. Karthik Chandrasekar is from Wick, and the analysts who support Mithun are part of their team and based in India (00:00:59).
+Mystery Shopper Project Context and Data Needs: Alexa explained that they are working on a "mystery shopper" project for the CEO, which requires confidence in the data and aims to understand how much a recipe basket costs for different customer personas at Worth, Kohl's, and Audi, and how this varies between supermarkets (00:04:17) (00:07:01). The team is hoping to reliably use the competitor price tables, as previous web scraping proved inaccurate, but they are exploring the data source due to current discrepancies, which might be related to store location, time lag, or data completion (00:03:14). Alexander Simmonds inquired about the project's sponsor, confirming it is customer insights (00:05:25).
+Data Collection and Accuracy Methodology: Alexander Simmonds and Mithun Bindiganavile provided context on their price index process, which uses web scrapes of Kohl's across about 30 stores nationwide, but relies heavily on in-store scrapes for Audi (00:08:12). In-store scrapes involve a person or agency physically checking prices in stores, typically on Wednesdays, for every product (00:09:28). Mithun estimated the accuracy of the in-store collections is around 99% (00:10:26).
+Competitor Data Range and Discrepancies: The team noted that while the overall range of Audi products is mostly present in the tables, specific details like the "new low price flag," "super saver lines," and some fresh lines might be missing from the website, requiring in-store collections to fill the gap (00:10:26). Alexander Simmonds clarified that a primary issue is that Aldi's lower shelf prices can be slow to reflect online, but they are currently evaluating the value of continuing the in-store scrape, as online pricing can sometimes update faster. The price changes for Worth, Kohl's, and Audi are generally done on Wednesdays (00:11:26).
+Data Refresh Schedule and Table Views: The competitor data undergoes a weekly refresh process involving third-party links, matching them to their own range, which adds a layer of risk (00:12:21). Mithun noted that raw data is received on Wednesday morning and validation takes place on Thursday, with data published to the dashboard on Friday. Two tables were discussed: the price index view, which has validated information and only matched lines, and the `compric v` table, which holds raw, store-level data (00:13:37). For the cleanest data read, Alexander Simmonds suggested accessing the data on a Friday after the final refresh, which provides a weekly snapshot (00:14:44).
+Pricing Granularity and Linking Issues: Mithun explained that Audi generally uses national pricing, though there are exceptions for fruit and vegetables, which vary by store and state (00:15:45). While they scrape prices at the store level, they roll this data up to a state level in the price index table by taking the most common price (00:17:51). Daria Volkova raised a question about products not being linked in the price index table, which Alexander Simmonds attributed to the subjectivity and self-interest of commercial teams who might choose not to link a product if the quality comparison is unfavorable, as seen with certain meat and sausage products (00:20:51).
+Data Consistency and Recommended Approach: Daria Volkova raised a concern about finding outdated request dates for products using the competitor reference number from the `competitor price index V` table (00:23:02). To resolve these complex issues, which involve multiple tables, filters like `deleted = n`, and specific handling for produce lines, Alexander Simmonds proposed that Daria and Alexa provide the specific columns and data they need (00:26:23). Alexander Simmonds, Mithun Bindiganavile, and Karthik Chandrasekar committed to creating a separate, customized table view for the team to use, removing the risk associated with complex filtering and data rules (00:28:27). The data request, including the desired format, should be sent to the team (00:30:16).
+

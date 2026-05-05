@@ -1,0 +1,25 @@
+mystery shopping
+The discussion covered planning for the upcoming Tribe Showcase and key findings regarding competitive product pricing data for the Mystery Shopping project.
+* Tribe Showcase Planning: Alexa is coordinating the upcoming presentation on "team coach and auto district code" with Leanne and Shona, deciding on joint or separate presentations, and will conduct individual run-throughs soon.1
+* Golnaz's Presentation Content: Golnaz offered to present her two-minute section, having prepared technical slides on the API, classification stages, and improvements to accuracy by design.1
+* Team Promotion: Alexa formally announced the promotion of Daria Volkova to Senior Data Scientist.1
+* Mystery Shopping Scalability: Daria reported that her initial solution for product searching was not scalable. Golnaz proposed using a retrieval-augmented generation (RAG) system with Vertex AI search, similar to the "body planner" project, as a potential solution.1
+* Price Discrepancies Found: Daria is sharing her analysis, which shows discrepancies between product prices from the web API and prices found in the BigQuery table of Woolworths and competitors (e.g., 50 cents to $1 difference for some products).1
+* Need for Generative Persona Logic: Alexa emphasized the need for a generative personality model to make real-time decisions on alternates (e.g., adjusting purchase quantity or quality) when a competitor product is not an exact match for the recipe.1
+* Data Merging Issues: Daria identified issues with competitive data merging, noting that some Aldi beef mince alternatives are missing from the combined table but exist in the "Only Competitors" table, and some competitor price data is old and location-specific.1
+* Data Source Strategy: Golnaz advised using the "Only Competitors" table and handling the merging/matching logic manually to control the data, while Alexa suggested speaking to Alec about trusting the current data or considering an MPC (scraping) approach.1
+
+
+
+ 
+* Personal Update: Alexa mentioned she had arrived at her destination in Wagga Wagga, having traveled from Sydney to Griffith to visit family.1
+* Competitive Data Ask: Daria indicated that their primary requirement is an up-to-date table matching Woolworths products with their competitive counterparts, specifically from Coles and Aldi.1
+* Email Strategy: They agreed to put their detailed "wish list" in an email to the external team. The email will explicitly state their ideal outcome and ask the team, based on their expertise, if the goal is realistic.1
+* Data Requirement Detail: They clarified that they need the Woolworths-to-competitor product match table with current, non-expired data, as well as the existing competitor-only table for products without a Woolworths match, which is necessary for a realistic mystery shopper basket scenario.1
+* Scraping: They opted to hold off on asking if they should attempt to replicate the web scraping process themselves, choosing to first see what the external team can deliver.1
+* Location-Based Pricing: The discussion touched on how price checking uses IP addresses for location, which defaults to the Mascot CFC store if a location cannot be identified.1
+* Simplifying Data Complexity: To avoid complexity while acknowledging price fluctuations between stores, they decided to use the Mascot store as the basis for Woolworths pricing and use an average price for competitors across New South Wales locations.1
+* Conclusion: Daria confirmed she would prepare and send the finalized email detailing their requests.1
+
+		
+

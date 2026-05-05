@@ -1,0 +1,38 @@
+Mystery shopper prioritisation
+Invited Alexa Kelly Daria Volkova
+Attachments Mystery shopper prioritisation
+Meeting records Transcript 
+
+
+Summary
+Scope constraints defined delivery strategies and agent architectures for the upcoming board meeting showcase.
+
+Project Scope and Strategy
+Team prioritized the May 18 deadline by rejecting historical data backfilling. Strategy shifts focus to delivering current BigQuery table requirements.
+
+Agent Architecture and Design
+Parallel agent designs utilize voting mechanisms and evaluation agents to select products. System implements rejection limits to prevent infinite processing loops.
+
+Board Meeting Presentation
+Decision made to build a front-end interface for the board meeting. Project showcases Claude capabilities to prevent competitive feature leakage.
+
+
+Next steps
+[Daria Volkova] Query Historical Data: Ask about historical call description data availability.
+[The group] Reject Scope Change: Push back on the historical data requirement; state ability to deliver later.
+[Alexa Kelly] Assist Prompt Design: Help Daria Volkova develop prompts for various customer segments.
+[Alexa Kelly] Contact Matthew: Speak with Matthew regarding sharing project details with Steve.
+[Daria Volkova] Push Code Changes: Upload the current agent code and prompts to the repository.
+[Alexa Kelly] Review Prompts: Review the pushed prompts and complete the quality assurance process.
+
+
+Details
+Scope Change and Historical Data Requirement: The meeting began with a discussion about a request to backfill data tables with historical information, which was noted to be outside the original scope of work. Daria Volkova mentioned that obtaining historical data, especially for Wolver's website prices, would require a lot of digging and essentially represents a complete change of scope. Given the upcoming deadline of May 18th, the consensus was to push back on the request for historical data and focus on delivering the current scope (00:01:31).
+Delivery Strategy and Task Parallelization: Alexa Kelly offered to help Daria Volkova with the delivery, inquiring about how much of the work is sequential versus parallel (00:02:46). The plan for the May 18th deadline is to deliver a BigQuery table containing the latest basket details. Alexa Kelly committed to assisting with the prompt design for different segments (00:04:01).
+Agent Design and Product Selection Mechanism: Daria Volkova explained the parallel agent design, where multiple agents run concurrently to select the best product based on a passed persona and product details (00:04:01). The input for the agent would include the personality (persona) and attributes of multiple product choices, such as for spaghetti (00:05:25). The next step in the pipeline involves a voting mechanism to look at the results from the parallel agents and select the product with the most votes, followed by sending the result to an evaluation agent for verification (00:06:53).
+Handling Evaluation and Loop Prevention: The participants discussed the need for the evaluation agent to verify the chosen product. A critical concern was preventing the system from getting stuck in an infinite loop if the evaluation agent rejects the choice, so they tentatively agreed that the system should only allow a limited number of rejections before accepting an answer (00:06:53). The entire data pipeline will involve product extraction, chosen product submission to the deployed agent, and sending the results to the evaluation agent (00:09:11).
+Prompt Design and Technology Considerations: The discussion covered prompt design, suggesting an overarching prompt for each cross-segment and a separate file for examples (00:04:01). Daria Volkova confirmed that they currently have "saver" and "traditional" personas built (00:09:11). It was also considered whether some checks, like those related to 'banana cases,' could be performed without needing a Large Language Model (LLM) (00:10:27).
+Code Review and Repository Access: Alexa Kelly requested that Daria Volkova push the current changes, including the prompts, to the repository to allow for review and quality assurance. Daria Volkova showed the current results, which include the selected product and the reasoning behind the choice (00:11:37) (00:16:09). The intent is to deploy the agents soon and build the entire flow afterwards (00:16:09).
+Concern Regarding Project Leakage: Alexa Kelly and Daria Volkova discussed an instance where Matthew had shared details of their project with someone outside the team, who was then inspired to build a similar basket-shopping agent for different competitors (00:12:53). Alexa Kelly expressed annoyance and stated they would address the situation with Matthew, recognizing the need to deliver their project quickly before the other individual does (00:13:57).
+Front-end Presentation for the Board Meeting: Alexa Kelly decided to build a front-end interface, potentially with a similar look to the current working environment, to impress the attendees at the upcoming board meeting (00:13:57). Although neither of them would be presenting at the board meeting, they recognized the presentation as an opportunity to showcase their capabilities with Claude (00:15:06).
+

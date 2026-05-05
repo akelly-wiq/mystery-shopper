@@ -1,0 +1,15 @@
+The discussion so far can be summarized into two main topics: Administrative Updates and Data Tables for Product Information.
+* Data Tables for Product Information:
+    * Woolworths Data: Daria found a contact person through Stuart who provided a table with recent website information, including historical data, Promise information, product attributes (like allergies, country of origin, Australian ingredient percent), and various promotion flags (e.g., half price, low price special, price drop special).1
+        * Action Item: Daria needs to check with Stuart if the Mascot service center, which is the default location, has a store ID in the data tables, as Alexa is concerned it might be excluded from analytics tables and limit the products they are reviewing.1
+    * Competitors Data (Coles and Aldi): Daria has a separate competitor table from Nissan, but it mainly provides details for Coles and not a separate table for Aldi.1
+        * The Coles data includes product details, ingredients, allergens, nutrition, and promotional information.1
+    * Aldi Data Strategy: They confirmed that they need to enrich Aldi data with product descriptions and other useful details (like allergens) for the eight use cases limited to about 100 products.1
+        * Daria suggested scraping the information "on the fly" as needed, but Alexa expressed concern about the risk of failure during runtime.1
+        * Action Item: Alexa suggested that Daria ask the pricing team how they scrape websites to avoid bot detection and figure out a reliable method for extracting the Aldi product description information.1
+    * Price Averaging: Alexa agreed that the question of whether to use an average price when a product has different postcodes/prices in the competitor table should be raised with Owen on Friday.1
+* Next Steps/Action Items:
+    * Daria needs to double-check with Stuart about the Mascot Sales Center store ID.1
+    * Daria will reach out to Nissan regarding website scraping methods to get Aldi product descriptions.1
+    * Daria will put together an overview of the data they have gathered.1
+    * Alexa will prepare a packet for Owen and tag Daria in it.1

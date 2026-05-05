@@ -1,0 +1,36 @@
+Apr 10, 2026
+Mystery Shopping next step
+Invited Alex Tran Alexa Kelly Owen Lim
+Attachments Mystery Shopping next step
+Meeting records Transcript 
+
+
+Summary
+Initial resource inquiry with unclear requirements led to defining work scope and resource expertise needed for agent validation.
+
+Resource Role Clarification
+The meeting began to clarify the role needed for Owen Lim's project following an email with undefined requirements. Participants agreed the discussion was necessary to confirm the required capabilities and the next steps for the beta system.
+
+Scope Definition and Validation
+The scope was defined by 4 tasks: testing shopping behavior rules, validating price accuracy, centralizing output data, and scheduling daily runs. The future vision includes a daily agent run across 3 major stores concurrent with human shopping validation.
+
+Data Scientist Resource Required
+Analysis of the 4 tasks determined that a data scientist with AI or LLM experience is the priority resource for the 4-week project. Owen Lim committed to informing Fasil about the scope alignment and the data science resource requirement.
+
+
+Next steps
+[Owen Lim] Update Fasil: Inform Fasil alignment reached on scope and Data Scientist resource. Obtain time commitment for project start timeline.
+[Owen Lim] Identify Resource: Email Alexa next week to identify the specific Data Scientist resource. Schedule a detailed scoping session with the identified resource.
+[Owen Lim] Share Documents: Send Alexa relevant documents today to prepare for the scoping session.
+
+
+Details
+Initial Discussion and Resource Inquiry: Alex Tran and someone in SYD-SO-SUR-407ELIZABETH-L5-MR.02 (5) [HO] reviewed an email from Owen Lim, noting that the required role (engineer, MLE, or data scientist) had not been clearly defined, which led to the purpose of the meeting. Owen Lim joined the meeting, and the participants agreed that the discussion was needed to confirm the next steps and the appropriate capabilities for the required work (00:00:58).
+Defining the Scope of Work: Alex Tran outlined four main components of the task: testing and refining shopping behavior rules, validating price accuracy, centralizing the output data, and scheduling a daily automated run (00:02:03). Owen Lim confirmed that the current system is a beta version built through "gems" with custom scripts for shopping missions based on personas, but it needs validation for price accuracy, automated pipelines, and proper testing of persona interpretations (00:03:17). The future vision includes an agent that runs daily across various stores (Cooh's, Willies, and Aldi) with a concurrent human shop element for validation (00:05:52).
+Determining the Required Expertise: Alex Tran analyzed the four tasks and suggested that the first two—testing/refining rules for logical consistency and validating price accuracy against existing data sources—require the expertise of a data scientist (00:06:51). The latter two tasks—centralized database management and scheduling the automated runs—could potentially be handled by an MLE or digital engineering, though someone in SYD-SO-SUR-407ELIZABETH-L5-MR.02 (5) [HO] noted that a data scientist is often enabled to complete their own systematic engineering work (00:08:00). The consensus was that a data scientist is the priority, especially one with experience in AI or large language models, as the bulk of the work involves testing and validating the agent's accuracy and robustness (00:10:37).
+Capacity, Timeline, and Resource Alignment: The team aligned on securing a data scientist resource and estimated the work would take approximately four weeks. Alex Tran confirmed that if the resource comes from their team and they can deprioritize non-urgent tasks, there would be no cost involved (00:09:21) (00:13:09). Owen Lim committed to informing Fasil about the alignment on the scope, the data science resource, and the four-week estimated timeline to determine the urgency and required resource movement (00:11:56) (00:15:29).
+Next Steps and Documentation: Owen Lim plans to follow up with Fasil and will discuss the specific resource with someone in SYD-SO-SUR-407ELIZABETH-L5-MR.02 (5) [HO] via email next week before a detailed scoping session. Someone in SYD-SO-SUR-407ELIZABETH-L5-MR.02 (5) [HO] requested any relevant documents to prepare for the upcoming work, which Owen Lim agreed to provide (00:15:29). The team acknowledged that the project is still considered "beta 2" or an "improved beta" and that although the board is asking questions about the agent's potential, there is still a possibility that the project might not progress further after the testing phase (00:14:34).
+
+
+You should review Gemini's notes to make sure they're accurate. Get tips and learn how Gemini takes notes
+How is the quality of these specific notes? Take a short survey to let us know your feedback, including how helpful the notes were for your needs.
