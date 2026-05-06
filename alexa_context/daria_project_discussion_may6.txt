@@ -1,0 +1,129 @@
+Project Discussion with Daria Volkova - May 6, 2026
+===========================================================
+
+WOOLWORTHS DATA AND AGENT DEVELOPMENT
+--------------------------------------
+- Daria gained access to Woolworths dataset containing historical data with prices and promo IDs
+- Reaching out to Mel to find table with promo descriptions
+- Built agent end-to-end and ready to demonstrate
+- Reviewing and refining Alexa's recently pushed prompts; will confirm after small adjustments
+
+BIGQUERY DATA UPDATE
+--------------------
+- Updated BigQuery tables for Coles and Aldi to include last 12 weeks of data
+- Could use 3-4 weeks of data as suggested by Owen
+- Decision: Creating separate vector base for semantic search for each week
+- Reasoning: Not difficult to implement and addresses concerns about potential product changes over the 3-week backfill period
+
+VECTOR SEARCH IMPLEMENTATION
+-----------------------------
+Technology: Local embedding model for semantic search (similar to party planner method)
+- NOT using Vertex AI search for Coles and Aldi
+- Reason: Data volume too small (20,000 products for Coles, 2,000 for Aldi)
+- Local implementation more appropriate
+- Creating vector store for each week for Coles and Aldi, then looping through them
+
+PRODUCT SELECTION FOR AGENT PIPELINE
+-------------------------------------
+Process:
+1. Vector search finds top 5 products
+2. Products passed to agent with specific persona prompt
+3. Agent selects best product
+Decision: Top 3 products should be sufficient given personality injection
+
+EVALUATOR PROMPT
+----------------
+- Daria to write evaluator prompt and review with Alexa
+
+NEXT STEPS
+----------
+- Daria to push latest changes to repository for review
+- Schedule follow-up meeting to discuss remaining tasks and overall deadline
+- 15-minute follow-up planned to finalize task definition and brainstorm pros/cons of selecting 5 vs all available products
+
+
+===========================================================
+FOLLOW-UP MEETING - May 6, 2026
+===========================================================
+Meeting: MYST SHOP
+Attendees: Alexa Kelly, Daria Volkova
+
+SUMMARY
+-------
+Meeting reviewed agent prompts and resolved to implement Vertex AI Search for improved ingredient retrieval.
+
+AGENT PROMPTS AND TESTING
+--------------------------
+- All persona simulations complete and require prompt review
+- Updated all prompts with four descriptions
+- Added 'retry context' for evaluation agent (injected if decision key returns 'false')
+- Testing requires accessing the 'parallel agents' branch (main branch is "useless")
+- To test: navigate to 'cd app' directory and select a persona
+- All available personas found in specified location
+
+SEARCH ACCURACY DECISION - REVISED
+-----------------------------------
+**DECISION CHANGED**: Refactoring to use Vertex AI Search instead of local embedding
+- Issue: Searching for ingredients like "chicken breast bulk pack" returns irrelevant results (e.g., "nuggets")
+- Solution: Use Vertex AI Search (vector store) for semantic search to get better accuracy
+- Creating 2 Vertex AI Search indexes: one for Aldi, one for Coles
+- Using ONE vector search for simplicity despite potential minimal differences across dates
+- Focus on simpler backfill solution
+
+DATA PIPELINE AND HISTORICAL SCOPE
+-----------------------------------
+- Historical data scope: 4 weeks back (though 12 weeks technically possible)
+- Pipeline will:
+  1. Search new Vertex AI indexes
+  2. Pick up 3 products
+  3. Run agent
+  4. Generate data frame for saving in BigQuery or CSV format
+
+OUTPUT SCHEMA ENRICHMENT
+-------------------------
+Raw output structure includes:
+- Mission name
+- Persona used
+- Ingredients
+- Retailer
+- Product name
+- Price
+- Pack size
+- Volume
+- Promotion indicator
+- Date
+
+Enhancements needed:
+- Add text field for decision justification
+- Include all decisioning attributes for transparency
+
+UNIT NORMALIZATION CHALLENGE
+-----------------------------
+Issue: Products sold in different units (e.g., bananas sold "each" vs required "1 kilogram")
+Solution: Pre-processing step to normalize units of measure before sending to persona agent
+- Enables accurate price comparisons
+- LLM call or separate pre-processing tool needed
+- Normalize product prices (e.g., convert all to 1kg equivalent)
+
+WOOLWORTHS OFFER DATA
+----------------------
+- Waiting for Mtho to provide "offer ID" description data
+- Needed for Woolworths historical implementation
+
+ACTION ITEMS
+------------
+Alexa Kelly:
+- Review all updated persona prompts and descriptions; assess if changes required
+- Test web: Run ADK web application locally; check responses
+- Update evaluation: Develop evaluation agent prompt structure and retry context
+- Create normalization: Develop LLM call or pre-processing tool to normalize product prices
+- Use existing data frame in B data test location for building and testing
+
+Daria Volkova:
+- Enrich schema: Add text field for decision justification to output BigQuery schema
+- Add attributes: Include all decisioning attributes used by product agent in output schema
+- Refactor search: Switch back to using vector store method (Vertex AI Search)
+- Create search: Set up 2 Vertex AI Search instances (one for Aldi, one for Coles)
+- Integrate extraction: Handle data extraction for pipeline programmatically
+- Build pipeline: Generate data frame and send to agent for decision making
+- Find offer data: Search for descriptive data for Offer ID numbers (Woolworths historical)
